@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7054992840978113147}
   - component: {fileID: 113616437297604883}
   - component: {fileID: -8120722927184218745}
+  - component: {fileID: -3300020753508059200}
   m_Layer: 0
   m_Name: Beer Can Blue Crushed
   m_TagString: Untagged
@@ -134,6 +135,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.27038097, y: 0.21046808, z: 0.37726134}
   m_Center: {x: -0.06268224, y: 0.014692768, z: -0.10682482}
+--- !u!95 &-3300020753508059200
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937326242163579350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 392bb8aa49bf149d1b7981c7aa758cf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4581694020254849032
 GameObject:
   m_ObjectHideFlags: 0

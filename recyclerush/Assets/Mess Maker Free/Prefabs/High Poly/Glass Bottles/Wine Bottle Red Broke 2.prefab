@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4312728383062020283}
   - component: {fileID: 1332314560172780016}
   - component: {fileID: 1753554022348555722}
+  - component: {fileID: 4581076354227547745}
   m_Layer: 0
   m_Name: Wine Bottle Red Broke 2
   m_TagString: Untagged
@@ -133,3 +134,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.19077358, y: 0.19089793, z: 0.58661956}
   m_Center: {x: 0, y: -0.00012592971, z: 0.22058555}
+--- !u!95 &4581076354227547745
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8322863303335674192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 392bb8aa49bf149d1b7981c7aa758cf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

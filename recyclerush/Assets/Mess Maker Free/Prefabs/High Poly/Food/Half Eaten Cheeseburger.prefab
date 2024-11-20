@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6143752882634769237}
   - component: {fileID: -3178013694214058986}
   - component: {fileID: 5441126668893642785}
+  - component: {fileID: 7208807835804178283}
   m_Layer: 0
   m_Name: Half Eaten Cheeseburger
   m_TagString: Untagged
@@ -133,3 +134,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15890394, y: 0.4034715, z: 0.19006708}
   m_Center: {x: -0.12939075, y: -0.00055371225, z: -0.015729364}
+--- !u!95 &7208807835804178283
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6143752882634769234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 392bb8aa49bf149d1b7981c7aa758cf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

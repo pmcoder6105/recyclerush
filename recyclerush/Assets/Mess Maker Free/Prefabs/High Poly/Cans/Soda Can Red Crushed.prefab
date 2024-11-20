@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 720171314480848431}
   - component: {fileID: 7496552346556713447}
   - component: {fileID: -960414858199526074}
+  - component: {fileID: 174526155908738560}
   m_Layer: 0
   m_Name: Soda Can Red Crushed
   m_TagString: Untagged
@@ -134,6 +135,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22194119, y: 0.19733188, z: 0.2532198}
   m_Center: {x: -0.040118553, y: 0.00005344674, z: -0.07565241}
+--- !u!95 &174526155908738560
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230034147011233538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 392bb8aa49bf149d1b7981c7aa758cf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7351139419438461794
 GameObject:
   m_ObjectHideFlags: 0

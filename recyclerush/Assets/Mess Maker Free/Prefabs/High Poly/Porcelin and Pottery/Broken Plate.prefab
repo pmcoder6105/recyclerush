@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8145147602312850871}
   - component: {fileID: -2353454274396578334}
   - component: {fileID: -1489899793465986853}
+  - component: {fileID: 3794283441450124160}
   m_Layer: 0
   m_Name: Broken Plate
   m_TagString: Untagged
@@ -133,3 +134,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7519193, y: 0.42998555, z: 0.051924136}
   m_Center: {x: 0.000032693148, y: -0.15807848, z: -0.028438533}
+--- !u!95 &3794283441450124160
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145317133613297876}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 392bb8aa49bf149d1b7981c7aa758cf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

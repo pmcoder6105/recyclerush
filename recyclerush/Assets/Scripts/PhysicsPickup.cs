@@ -2,75 +2,55 @@ using UnityEngine;
 
 public class PhysicsPickup : MonoBehaviour
 {
-    private Camera mainCamera;
-    private Rigidbody selectedObject;
-    private Vector3 offset;
+    public Transform objectToMove; // The object to move
+    public float planeDistance = 5f; // Distance of the plane from the camera
 
-    void Start()
-    {
-        // Get the main camera reference
-        mainCamera = Camera.main;
-    }
-
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button pressed
+        // Check if the left mouse button is clicked
+        if (Input.GetMouseButton(0))
         {
-            Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+            // Get the main camera
+            Camera mainCamera = Camera.main;
+
+            if (mainCamera == null)
+            {
+                Debug.LogError("Main camera not found. Assign a camera to the MainCamera tag.");
+                return;
+            }
 
             // Get the mouse position
             Vector3 mousePosition = Input.mousePosition;
 
-            // Convert both positions to world space using the camera
-            Ray rayFromCenter = mainCamera.ScreenPointToRay(screenCenter);
+            // Create a ray from the mouse position
             Ray rayToMouse = mainCamera.ScreenPointToRay(mousePosition);
-            Debug.DrawRay(rayToMouse.origin, rayToMouse.direction * 100, Color.blue, 2f);
-            if (Physics.Raycast(rayToMouse, out RaycastHit hit, Mathf.Infinity))
+
+            // Define a plane parallel to the camera's view at a fixed distance
+            Vector3 planeOrigin = mainCamera.transform.position + mainCamera.transform.forward * planeDistance;
+            Plane cameraAlignedPlane = new Plane(-mainCamera.transform.forward, planeOrigin);
+
+            // Check if the ray intersects the plane
+            if (cameraAlignedPlane.Raycast(rayToMouse, out float enter))
             {
-                // Check if the hit object has a Rigidbody
-                Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
-                if (rb != null)
+                // Calculate the intersection point
+                Vector3 hitPoint = rayToMouse.GetPoint(enter);
+
+                // Move the object to the intersection point
+                if (objectToMove != null)
                 {
-                    selectedObject = rb;
-                    selectedObject.useGravity = false; // Disable gravity while dragging
-                    selectedObject.velocity = Vector3.zero; // Stop any existing motion
-                    Debug.Log("Checkpoint 1?");
-
-                    // Calculate the offset between the object and the camera ray
-                    offset = hit.point - selectedObject.transform.position;
+                    //objectToMove.position = hitPoint;
+                    objectToMove.GetComponent<Rigidbody>().MovePosition(new Vector3(hitPoint.x, hitPoint.y, objectToMove.transform.position.z));
+                    Debug.Log($"Object moved to: {hitPoint}");
                 }
+
+                // Visualize the ray in the Scene view
+                Debug.DrawRay(rayToMouse.origin, rayToMouse.direction * enter, Color.green, 2f);
             }
-        }
-
-        if (Input.GetMouseButton(0) && selectedObject != null) // While holding the mouse button
-        {
-            Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
-
-            // Get the mouse position
-            Vector3 mousePosition = Input.mousePosition;
-
-            // Convert both positions to world space using the camera
-            Ray rayFromCenter = mainCamera.ScreenPointToRay(screenCenter);
-            Ray rayToMouse = mainCamera.ScreenPointToRay(mousePosition);
-            Debug.DrawRay(rayToMouse.origin, rayToMouse.direction * 100, Color.blue, 2f);
-                    Debug.Log("Checkpoint 2?");
-
-
-            if (Physics.Raycast(rayToMouse, out RaycastHit hit, Mathf.Infinity))
+            else
             {
-                    Debug.Log("Checkpoint 3?");
-
-                // Update the object's position based on the ray hit
-                Vector3 targetPosition = hit.point - offset;
-                Debug.Log(targetPosition.x);
-                selectedObject.MovePosition(new Vector3(targetPosition.x, targetPosition.y, selectedObject.position.z));
+                Debug.Log("Ray did not intersect the camera-aligned plane.");
             }
-        }
-
-        if (Input.GetMouseButtonUp(0) && selectedObject != null) // Mouse button released
-        {
-            selectedObject.useGravity = true; // Re-enable gravity
-            selectedObject = null; // Clear the reference
         }
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7662924492406944713}
   - component: {fileID: -6823221680061021417}
   - component: {fileID: 7147489193568715289}
+  - component: {fileID: -6569361502882498367}
   m_Layer: 0
   m_Name: Beer Bottle Red
   m_TagString: Untagged
@@ -133,3 +134,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.112412974, y: 0.11241394, z: 0.48414254}
   m_Center: {x: 0, y: 0.00020496547, z: -0.0026914477}
+--- !u!95 &-6569361502882498367
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892776325915541104}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 392bb8aa49bf149d1b7981c7aa758cf5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

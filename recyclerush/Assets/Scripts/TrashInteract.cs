@@ -19,7 +19,7 @@ public class TrashInteract : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision) {
+    void OnTriggerEnter(Collider collision) {
         if (trashManager.trashType == type) {
             //correct
         }
@@ -27,5 +27,6 @@ public class TrashInteract : MonoBehaviour
             //wrong
         }
         trashManager.MakeNewTrash();
+        transform.root.GetComponent<TrashBin>().canClose = true;
     }
 }
