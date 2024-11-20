@@ -23,3 +23,12 @@ Recycle Rush was built using Unity. The game features dynamic animations, intera
 ### Impact and Goals:
 
 Our ultimate goal is to raise awareness about waste sorting and make recycling habits second nature. Whether you're a student, a professional, or just someone looking for a fun game, Recycling Rush turns an everyday responsibility into an exciting game. Thank you for letting me share Recyclign Rush with you. I hope this game inspires players to take small but meaningful steps towards a more sustainable future.
+
+#### Developers Notes:
+
+Using this for the many environmentally friendly hackathons found on Devpost.
+Those being:
+    - Hack4Humanity
+    - EduLearns
+    - Smart City
+    - Nature Hacks
