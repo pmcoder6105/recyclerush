@@ -17,7 +17,8 @@ public class TrashBin : MonoBehaviour
     [SerializeField] float xRotation;
     public bool canClose = true;
     
-    [SerializeField] NewTrash trashManager; 
+    [SerializeField] NewTrash trashManager;
+    [SerializeField] UIManager uIM;
     
 
     // Start is called before the first frame update
@@ -39,6 +40,9 @@ public class TrashBin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!uIM.canClick)
+            return;
+
         Vector3 mousePosition = Input.mousePosition;
 
         // Convert both positions to world space using the camera

@@ -7,6 +7,7 @@ public class TrashInteract : MonoBehaviour
     public int type;
     [SerializeField] NewTrash trashManager;
     [SerializeField] SoundManager sM;
+    [SerializeField] UIManager uIM;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +30,16 @@ public class TrashInteract : MonoBehaviour
             //correct
             Debug.Log("Correct choice");
             sM.PlayPointSound(true);
+            uIM.AddPoint();
         }
         else {
             //wrong
             Debug.Log("Wrong choice");
-
             sM.PlayPointSound(false);
+            uIM.RemovePoint();
+            uIM.DisplayTooltip(type, true, uIM.uiDisableTime);
+            uIM.canClick = false;
         }
-        trashManager.MakeNewTrash();
-        
+        trashManager.MakeNewTrash(); //this will be used for making new trash
     }
 }
