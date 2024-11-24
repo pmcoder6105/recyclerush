@@ -6,7 +6,6 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-
     [SerializeField] TMP_Text pointCounter;
     int points = 0;
     [SerializeField] TMP_Text timer;
@@ -17,20 +16,31 @@ public class UIManager : MonoBehaviour
     public bool canClick = false;
     public float uiDisableTime = 0.25f;
 
+    [SerializeField] bool isMenu = false;
+
     
     void Awake() {
+        if (isMenu)
+            return;
+        
         DisplayTooltip(4, true, 0f);
     }
     
     // Start is called before the first frame update
     void Start()
     {
+        if (isMenu)
+            return;
+        
         timerIsRunning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isMenu)
+            return;
+
         if (timerIsRunning) {
             if (timeRemaining > 0) {
                 timeRemaining -= Time.deltaTime;
